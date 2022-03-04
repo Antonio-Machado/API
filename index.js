@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 const User = require("./models/user.model")
 const Cursos = require("./models/cursos.model")
@@ -6,7 +7,7 @@ app.use(express.json())
 const userController = require("./controllers/user.controllers")
 const cursosController = require("./controllers/cursos.controllers")
 const authController = require("./controllers/auth.controllers")(app)
-
+//
 
 const db = require("./config/database")
 db.on("connected", () => {

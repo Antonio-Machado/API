@@ -1,4 +1,4 @@
 const mongoose = require("mongoose");
-
-mongoose.connect('mongodb://localhost:27017/cursos_online')
+console.log("~url: ", process.env.DATABASE)
+mongoose.connect(process.env.DATABASE)
 module.exports = mongoose.connection
