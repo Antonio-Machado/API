@@ -1,8 +1,10 @@
 require('dotenv').config()
+const cors = require('cors')
 var express = require('express');
 const User = require("./models/user.model")
 const Cursos = require("./models/cursos.model")
 var app = express()
+app.use(cors())
 app.use(express.json())
 const userController = require("./controllers/user.controllers")
 const cursosController = require("./controllers/cursos.controllers")
