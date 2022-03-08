@@ -5,7 +5,7 @@ const courseRouter = require("../routes/cursos.router")
 module.exports = (app) => {
     app.use("/api/users", userRouter)
     app.use("/api/cursos", courseRouter)
-    app.use("/api", (request, response) => {
+    app.use("/", (request, response) => {
         console.log("Bem vindo a minha API")
         response.send("Bem vindo a minha API")
     })
